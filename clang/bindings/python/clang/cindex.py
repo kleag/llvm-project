@@ -964,7 +964,7 @@ CursorKind.INIT_LIST_EXPR = CursorKind(119)
 CursorKind.ADDR_LABEL_EXPR = CursorKind(120)
 
 # This is the GNU Statement Expression extension: ({int X=4; X;})
-CursorKind.StmtExpr = CursorKind(121)
+CursorKind.STMT_EXPR = CursorKind(121)
 
 # Represents a C11 generic selection.
 CursorKind.GENERIC_SELECTION_EXPR = CursorKind(122)
@@ -1084,6 +1084,57 @@ CursorKind.OMP_ARRAY_SECTION_EXPR = CursorKind(147)
 # Represents an @available(...) check.
 CursorKind.OBJC_AVAILABILITY_CHECK_EXPR = CursorKind(148)
 
+# Fixed point literal
+CursorKind.FIXED_POINT_LITERAL = CursorKind(149)
+
+# OpenMP 5.0 [2.1.4, Array Shaping].
+CursorKind.OMP_ARRAY_SHAPING_EXPR = CursorKind(150)
+
+# OpenMP 5.0 [2.1.6 Iterators]
+CursorKind.OMP_ITERATOR_EXPR = CursorKind(151)
+
+# OpenCL's addrspace_cast<> expression.
+CursorKind.CXX_ADDRSPACE_CAST_EXPR = CursorKind(152)
+
+# Expression that references a C++20 concept.
+CursorKind.CONCEPT_SPECIALIZATION_EXPR = CursorKind(153)
+
+# Expression that references a C++20 concept.
+CursorKind.REQUIRES_EXPR = CursorKind(154)
+
+# Expression that introduces cleanups to be run at the end of the
+# sub-expression's evaluation.
+CursorKind.EXPR_WITH_CLEANUPS = CursorKind(155)
+
+CursorKind.MATRIX_SUBSCRIPT_EXP = CursorKind(156)
+
+CursorKind.DEPENDENT_SCOPE_DECL_REF_EXPR = CursorKind(157)
+
+CursorKind.SUBST_NON_TYPE_TEMPLATE_PARM_EXPR = CursorKind(158)
+
+CursorKind.SUBST_NON_TYPE_TEMPLATE_PARM_PACK_EXPR = CursorKind(159)
+
+CursorKind.FUNCTION_PARM_PACK_EXPR = CursorKind(160)
+
+CursorKind.UNRESOLVED_LOOKUP_EXPR = CursorKind(161)
+
+CursorKind.CXX_DEPENDENT_SCOPE_MEMBER_EXPR = CursorKind(162)
+CursorKind.CXX_PSEUDO_DESTRUCTOR_EXPR = CursorKind(163)
+CursorKind.MEMBER_EXPR = CursorKind(164)
+CursorKind.MS_PROPERTY_REF_EXPR = CursorKind(165)
+CursorKind.OBJC_ISA_EXPR = CursorKind(166)
+CursorKind.OBJC_IVAR_REF_EXPR = CursorKind(167)
+CursorKind.OBJC_PROPERTY_REF_EXPR = CursorKind(168)
+CursorKind.UNRESOLVED_MEMBER_EXPR = CursorKind(169)
+
+CursorKind.CXX_OPERATOR_CALL_EXPR = CursorKind(170)
+CursorKind.CXX_MEMBER_CALL_EXPR = CursorKind(171)
+CursorKind.CUDA_KERNEL_CALL_EXPR = CursorKind(172)
+CursorKind.CXX_CONSTRUCT_EXPR = CursorKind(173)
+CursorKind.CXX_INHERITED_CTOR_INIT_EXPR = CursorKind(174)
+CursorKind.CXX_TEMPORARY_OBJECT_EXPR = CursorKind(175)
+CursorKind.CXX_UNRESOLVED_CONSTRUCT_EXPR = CursorKind(176)
+CursorKind.USER_DEFINED_LITERAL = CursorKind(177)
 
 # A statement whose specific kind is not exposed via this interface.
 #
@@ -1305,6 +1356,155 @@ CursorKind.OMP_TARGET_SIMD_DIRECTIVE = CursorKind(270)
 # OpenMP teams distribute directive.
 CursorKind.OMP_TEAMS_DISTRIBUTE_DIRECTIVE = CursorKind(271)
 
+# OpenMP teams distribute simd directive.
+CursorKind.OMP_TEAMS_DISTRIBUTE_SIMD_DIRECTIVE = CursorKind(272)
+
+# OpenMP teams distribute parallel for simd directive.
+CursorKind.OMP_TEAMS_DISTRIBUTE_PARALLEL_FOR_SIMD_DIRECTIVE = CursorKind(273)
+
+# OpenMP teams distribute parallel for directive.
+CursorKind.OMP_TEAMS_DISTRIBUTE_PARALLEL_FOR_DIRECTIVE = CursorKind(274)
+
+# OpenMP target teams directive.
+CursorKind.OMP_TARGET_TEAMS_DIRECTIVE = CursorKind(275)
+
+# OpenMP target teams distribute directive.
+CursorKind.OMP_TARGET_TEAMS_DISTRIBUTE_DIRECTIVE = CursorKind(276)
+
+# OpenMP target teams distribute parallel for directive.
+
+CursorKind.OMP_TARGET_TEAMS_DISTRIBUTE_PARALLEL_FOR_DIRECTIVE = CursorKind(277)
+
+# OpenMP target teams distribute parallel for simd directive.
+CursorKind.OMP_TARGET_TEAMS_DISTRIBUTE_PARALLEL_FOR_SIMD_DIRECTIVE = CursorKind(278)
+
+# OpenMP target teams distribute simd directive.
+CursorKind.OMP_TARGET_TEAMS_DISTRIBUTE_SIMD_DIRECTIVE = CursorKind(279)
+
+# C++2a std::bit_cast expression.
+CursorKind.BUILTIN_BIT_CAST_EXPR = CursorKind(280)
+
+# OpenMP master taskloop directive.
+CursorKind.OMP_MASTER_TASK_LOOP_DIRECTIVE = CursorKind(281)
+
+# OpenMP parallel master taskloop directive.
+CursorKind.OMP_PARALLEL_MASTER_TASK_LOOP_DIRECTIVE = CursorKind(282)
+
+# OpenMP master taskloop simd directive.
+CursorKind.OMP_MASTER_TASK_LOOP_SIMD_DIRECTIVE = CursorKind(283)
+
+# OpenMP parallel master taskloop simd directive.
+CursorKind.OMP_PARALLEL_MASTER_TASK_LOOP_SIMD_DIRECTIVE = CursorKind(284)
+
+# OpenMP parallel master directive.
+CursorKind.OMP_PARALLEL_MASTER_DIRECTIVE = CursorKind(285)
+
+# OpenMP depobj directive.
+CursorKind.OMP_DEPOBJ_DIRECTIVE = CursorKind(286)
+
+# OpenMP scan directive.
+CursorKind.OMP_SCAN_DIRECTIVE = CursorKind(287)
+
+# OpenMP tile directive.
+CursorKind.OMP_TILE_DIRECTIVE = CursorKind(288)
+
+# OpenMP canonical loop.
+CursorKind.OMP_CANONICAL_LOOP = CursorKind(289)
+
+# OpenMP interop directive.
+CursorKind.OMP_INTEROP_DIRECTIVE = CursorKind(290)
+
+# OpenMP dispatch directive.
+CursorKind.OMP_DISPATCH_DIRECTIVE = CursorKind(291)
+
+# OpenMP masked directive.
+CursorKind.OMP_MASKED_DIRECTIVE = CursorKind(292)
+
+# OpenMP unroll directive.
+CursorKind.OMP_UNROLL_DIRECTIVE = CursorKind(293)
+
+# OpenMP metadirective directive.
+CursorKind.OMP_META_DIRECTIVE = CursorKind(294)
+
+# OpenMP loop directive.
+CursorKind.OMP_GENERIC_LOOP_DIRECTIVE = CursorKind(295)
+
+# OpenMP teams loop directive.
+CursorKind.OMP_TEAMS_GENERIC_LOOP_DIRECTIVE = CursorKind(296)
+
+# OpenMP target teams loop directive.
+CursorKind.OMP_TARGET_TEAMS_GENERIC_LOOP_DIRECTIVE = CursorKind(297)
+
+# OpenMP parallel loop directive.
+CursorKind.OMP_PARALLEL_GENERIC_LOOP_DIRECTIVE = CursorKind(298)
+
+# OpenMP target parallel loop directive.
+CursorKind.OMP_TARGET_PARALLEL_GENERIC_LOOP_DIRECTIVE = CursorKind(299)
+
+# OpenMP parallel masked directive.
+CursorKind.OMP_PARALLEL_MASKED_DIRECTIVE = CursorKind(300)
+
+# OpenMP masked taskloop directive.
+CursorKind.OMP_MASKED_TASK_LOOP_DIRECTIVE = CursorKind(301)
+
+# OpenMP masked taskloop simd directive.
+CursorKind.OMP_MASKED_TASK_LOOP_SIMD_DIRECTIVE = CursorKind(302)
+
+# OpenMP parallel masked taskloop directive.
+CursorKind.OMP_PARALLEL_MASKED_TASK_LOOP_DIRECTIVE = CursorKind(303)
+
+# OpenMP parallel masked taskloop simd directive.
+CursorKind.OMP_PARALLEL_MASKED_TASK_LOOP_SIMD_DIRECTIVE = CursorKind(304)
+
+CursorKind.COROUTINE_BODY_STMT = CursorKind(305)
+
+CursorKind.CORETURN_STMT = CursorKind(306)
+
+CursorKind.ARRAY_TYPE_TRAIT_EXPR = CursorKind(307)
+CursorKind.AS_TYPE_EXPR = CursorKind(308)
+CursorKind.ATOMIC_EXPR = CursorKind(309)
+CursorKind.BINARY_CONDITIONAL_OPERATOR = CursorKind(310)
+CursorKind.TYPE_TRAIT_EXPR = CursorKind(311)
+CursorKind.COAWAIT_EXPR = CursorKind(312)
+CursorKind.DEPENDENT_COAWAIT_EXPR = CursorKind(313)
+CursorKind.COYIELD_EXPR = CursorKind(314)
+CursorKind.CXX_BIND_TEMPORARY_EXPR = CursorKind(315)
+CursorKind.CXX_DEFAULT_ARG_EXPR = CursorKind(316)
+CursorKind.CXX_DEFAULT_INIT_EXPR = CursorKind(317)
+CursorKind.CXX_FOLD_EXPR = CursorKind(318)
+CursorKind.CXX_REWRITTEN_BINARY_OPERATOR = CursorKind(319)
+CursorKind.CXX_STD_INITIALIZER_LIST_EXPR = CursorKind(320)
+CursorKind.CXX_SCALAR_VALUE_INIT_EXPR = CursorKind(321)
+CursorKind.CXX_UUIDOF_EXPR = CursorKind(322)
+CursorKind.CHOOSE_EXPR = CursorKind(323)
+CursorKind.DESIGNATED_INIT_EXPR = CursorKind(324)
+CursorKind.DESIGNATED_INIT_UPDATE_EXPR = CursorKind(325)
+CursorKind.ARRAY_INIT_LOOP_EXPR = CursorKind(326)
+CursorKind.ARRAY_INIT_INDEX_EXPR = CursorKind(327)
+CursorKind.EXPRESSION_TRAIT_EXPR = CursorKind(328)
+CursorKind.EXT_VECTOR_ELEMENT_EXPR = CursorKind(329)
+CursorKind.IMPLICIT_CAST_EXPR = CursorKind(330)
+CursorKind.IMPLICIT_VALUE_INIT_EXPR = CursorKind(331)
+CursorKind.NO_INIT_EXPR = CursorKind(332)
+CursorKind.MATERIALIZE_TEMPORARY_EXPR = CursorKind(333)
+CursorKind.OBJC_INDIRECT_COPY_RESTORE_EXPR = CursorKind(334)
+CursorKind.OFFSET_OF_EXPR = CursorKind(335)
+CursorKind.PAREN_LIST_EXPR = CursorKind(336)
+CursorKind.PREDEFINED_EXPR = CursorKind(337)
+CursorKind.SHUFFLE_VECTOR_EXPR = CursorKind(338)
+CursorKind.SOURCE_LOC_EXPR = CursorKind(339)
+CursorKind.CONVERT_VECTOR_EXPR = CursorKind(340)
+CursorKind.VA_ARG_EXPR = CursorKind(341)
+CursorKind.OBJC_ARRAY_LITERAL = CursorKind(342)
+CursorKind.OBJC_DICTIONARY_LITERAL = CursorKind(343)
+CursorKind.OBJC_BOXED_EXPR = CursorKind(344)
+CursorKind.OBJC_SUBSCRIPT_REFEXPR = CursorKind(345)
+CursorKind.RECOVERY_EXPR = CursorKind(346)
+CursorKind.SYCL_UNIQUE_STABLE_NAME_EXPR = CursorKind(347)
+
+CursorKind.ATTRIBUTED_STMT = CursorKind(348)
+CursorKind.CAPTURED_STMT = CursorKind(349)
+
 ###
 # Other Kinds
 
@@ -1342,6 +1542,26 @@ CursorKind.VISIBILITY_ATTR = CursorKind(417)
 
 CursorKind.DLLEXPORT_ATTR = CursorKind(418)
 CursorKind.DLLIMPORT_ATTR = CursorKind(419)
+
+CursorKind.NS_RETURNS_RETAINED = CursorKind(420)
+CursorKind.NS_RETURNS_NOT_RETAINED = CursorKind(421)
+CursorKind.NS_RETURNS_AUTORELEASED = CursorKind(422)
+CursorKind.NS_CONSUMES_SELF = CursorKind(423)
+CursorKind.NS_CONSUMED = CursorKind(424)
+CursorKind.OBJC_EXCEPTION = CursorKind(425)
+CursorKind.OBJC_NS_OBJECT = CursorKind(426)
+CursorKind.OBJC_INDEPENDENT_CLASS = CursorKind(427)
+CursorKind.OBJC_PRECISE_LIFETIME = CursorKind(428)
+CursorKind.OBJC_RETURNS_INNER_POINTER = CursorKind(429)
+CursorKind.OBJC_REQUIRES_SUPER = CursorKind(430)
+CursorKind.OBJC_ROOT_CLASS = CursorKind(431)
+CursorKind.OBJC_SUBCLASSING_RESTRICTED = CursorKind(432)
+CursorKind.OBJC_EXPLICIT_PROTOCOL_IMPL = CursorKind(433)
+CursorKind.OBJC_DESIGNATED_INITIALIZER = CursorKind(434)
+CursorKind.OBJC_RUNTIME_VISIBLE = CursorKind(435)
+CursorKind.OBJC_BOXABLE = CursorKind(436)
+CursorKind.FLAG_ENUM = CursorKind(437)
+
 CursorKind.CONVERGENT_ATTR = CursorKind(438)
 CursorKind.WARN_UNUSED_ATTR = CursorKind(439)
 CursorKind.WARN_UNUSED_RESULT_ATTR = CursorKind(440)
@@ -1365,6 +1585,8 @@ CursorKind.TYPE_ALIAS_TEMPLATE_DECL = CursorKind(601)
 CursorKind.STATIC_ASSERT = CursorKind(602)
 # A friend declaration
 CursorKind.FRIEND_DECL = CursorKind(603)
+# A concept declaration
+CursorKind.CONCEPT_DECL = CursorKind(604)
 
 # A code completion overload candidate.
 CursorKind.OVERLOAD_CANDIDATE = CursorKind(700)

@@ -289,53 +289,179 @@ CXCursor cxcursor::MakeCXCursor(const Stmt *S, const Decl *Parent,
     break;
 
   case Stmt::CoroutineBodyStmtClass:
+    K = CXCursor_CoroutineBodyStmt;
+    break;
+
   case Stmt::CoreturnStmtClass:
-    K = CXCursor_UnexposedStmt;
+    K = CXCursor_CoreturnStmt;
+    break;
+
+  case Stmt::ExprWithCleanupsClass:
+    K = CXCursor_ExprWithCleanups;
     break;
 
   case Stmt::ArrayTypeTraitExprClass:
+    K = CXCursor_ArrayTypeTraitExpr;
+    break;
+
   case Stmt::AsTypeExprClass:
+    K = CXCursor_AsTypeExpr;
+    break;
+
   case Stmt::AtomicExprClass:
+    K = CXCursor_AtomicExpr;
+    break;
+
   case Stmt::BinaryConditionalOperatorClass:
+    K = CXCursor_BinaryConditionalOperator;
+    break;
+
   case Stmt::TypeTraitExprClass:
+    K = CXCursor_TypeTraitExpr;
+    break;
+
   case Stmt::CoawaitExprClass:
+    K = CXCursor_CoawaitExpr;
+    break;
+
   case Stmt::DependentCoawaitExprClass:
+    K = CXCursor_DependentCoawaitExpr;
+    break;
+
   case Stmt::CoyieldExprClass:
+    K = CXCursor_CoyieldExpr;
+    break;
+
   case Stmt::CXXBindTemporaryExprClass:
+    K = CXCursor_CXXBindTemporaryExpr;
+    break;
+
   case Stmt::CXXDefaultArgExprClass:
+    K = CXCursor_CXXDefaultArgExpr;
+    break;
+
   case Stmt::CXXDefaultInitExprClass:
+    K = CXCursor_CXXDefaultInitExpr;
+    break;
+
   case Stmt::CXXFoldExprClass:
+    K = CXCursor_CXXFoldExpr;
+    break;
+
   case Stmt::CXXRewrittenBinaryOperatorClass:
+    K = CXCursor_CXXRewrittenBinaryOperator;
+    break;
+
   case Stmt::CXXStdInitializerListExprClass:
+    K = CXCursor_CXXStdInitializerListExpr;
+    break;
+
   case Stmt::CXXScalarValueInitExprClass:
+    K = CXCursor_CXXScalarValueInitExpr;
+    break;
+
   case Stmt::CXXUuidofExprClass:
+    K = CXCursor_CXXUuidofExpr;
+    break;
+
   case Stmt::ChooseExprClass:
+    K = CXCursor_ChooseExpr;
+    break;
+
   case Stmt::DesignatedInitExprClass:
+    K = CXCursor_DesignatedInitExpr;
+    break;
+
   case Stmt::DesignatedInitUpdateExprClass:
+    K = CXCursor_DesignatedInitUpdateExpr;
+    break;
+
   case Stmt::ArrayInitLoopExprClass:
+    K = CXCursor_ArrayInitLoopExpr;
+    break;
+
   case Stmt::ArrayInitIndexExprClass:
-  case Stmt::ExprWithCleanupsClass:
+    K = CXCursor_ArrayInitIndexExpr;
+    break;
+
   case Stmt::ExpressionTraitExprClass:
+    K = CXCursor_ExpressionTraitExpr;
+    break;
+
   case Stmt::ExtVectorElementExprClass:
+    K = CXCursor_ExtVectorElementExpr;
+    break;
+
   case Stmt::ImplicitCastExprClass:
+    K = CXCursor_ImplicitCastExpr;
+    break;
+
   case Stmt::ImplicitValueInitExprClass:
+    K = CXCursor_ImplicitValueInitExpr;
+    break;
+
   case Stmt::NoInitExprClass:
+    K = CXCursor_NoInitExpr;
+    break;
+
   case Stmt::MaterializeTemporaryExprClass:
+    K = CXCursor_MaterializeTemporaryExpr;
+    break;
+
   case Stmt::ObjCIndirectCopyRestoreExprClass:
+    K = CXCursor_ObjCIndirectCopyRestoreExpr;
+    break;
+
   case Stmt::OffsetOfExprClass:
+    K = CXCursor_OffsetOfExpr;
+    break;
+
   case Stmt::ParenListExprClass:
+    K = CXCursor_ParenListExpr;
+    break;
+
   case Stmt::PredefinedExprClass:
+    K = CXCursor_PredefinedExpr;
+    break;
+
   case Stmt::ShuffleVectorExprClass:
+    K = CXCursor_ShuffleVectorExpr;
+    break;
+
   case Stmt::SourceLocExprClass:
+    K = CXCursor_SourceLocExpr;
+    break;
+
   case Stmt::ConvertVectorExprClass:
+    K = CXCursor_ConvertVectorExpr;
+    break;
+
   case Stmt::VAArgExprClass:
+    K = CXCursor_VAArgExpr;
+    break;
+
   case Stmt::ObjCArrayLiteralClass:
+    K = CXCursor_ObjCArrayLiteral;
+    break;
+
   case Stmt::ObjCDictionaryLiteralClass:
+    K = CXCursor_ObjCDictionaryLiteral;
+    break;
+
   case Stmt::ObjCBoxedExprClass:
+    K = CXCursor_ObjCBoxedExpr;
+    break;
+
   case Stmt::ObjCSubscriptRefExprClass:
+    K = CXCursor_ObjCSubscriptRefExpr;
+    break;
+
   case Stmt::RecoveryExprClass:
+    K = CXCursor_RecoveryExpr;
+    break;
+
   case Stmt::SYCLUniqueStableNameExprClass:
-    K = CXCursor_UnexposedExpr;
+    K = CXCursor_SYCLUniqueStableNameExpr;
     break;
 
   case Stmt::OpaqueValueExprClass:
@@ -361,7 +487,7 @@ CXCursor cxcursor::MakeCXCursor(const Stmt *S, const Decl *Parent,
     break;
 
   case Stmt::AttributedStmtClass:
-    K = CXCursor_UnexposedStmt;
+    K = CXCursor_AttributedStmt;
     break;
 
   case Stmt::DeclStmtClass:
@@ -369,7 +495,7 @@ CXCursor cxcursor::MakeCXCursor(const Stmt *S, const Decl *Parent,
     break;
 
   case Stmt::CapturedStmtClass:
-    K = CXCursor_UnexposedStmt;
+    K = CXCursor_CapturedStmt;
     break;
 
   case Stmt::IntegerLiteralClass:
@@ -419,8 +545,7 @@ CXCursor cxcursor::MakeCXCursor(const Stmt *S, const Decl *Parent,
     break;
 
   case Stmt::MatrixSubscriptExprClass:
-    // TODO: add support for MatrixSubscriptExpr.
-    K = CXCursor_UnexposedExpr;
+    K = CXCursor_MatrixSubscriptExpr;
     break;
 
   case Stmt::OMPArraySectionExprClass:
@@ -583,35 +708,95 @@ CXCursor cxcursor::MakeCXCursor(const Stmt *S, const Decl *Parent,
     break;
 
   case Stmt::DependentScopeDeclRefExprClass:
+    K = CXCursor_DependentScopeDeclRefExpr;
+    break;
+
   case Stmt::SubstNonTypeTemplateParmExprClass:
+    K = CXCursor_SubstNonTypeTemplateParmExpr;
+    break;
+
   case Stmt::SubstNonTypeTemplateParmPackExprClass:
+    K = CXCursor_SubstNonTypeTemplateParmPackExpr;
+    break;
+
   case Stmt::FunctionParmPackExprClass:
+    K = CXCursor_FunctionParmPackExpr;
+    break;
+
   case Stmt::UnresolvedLookupExprClass:
+    K = CXCursor_UnresolvedLookupExpr;
+    break;
+
   case Stmt::TypoExprClass: // A typo could actually be a DeclRef or a MemberRef
     K = CXCursor_DeclRefExpr;
     break;
 
   case Stmt::CXXDependentScopeMemberExprClass:
+    K = CXCursor_CXXDependentScopeMemberExpr;
+    break;
+
   case Stmt::CXXPseudoDestructorExprClass:
+    K = CXCursor_CXXPseudoDestructorExpr;
+    break;
+
   case Stmt::MemberExprClass:
+    K = CXCursor_MemberExpr;
+    break;
+
   case Stmt::MSPropertyRefExprClass:
+    K = CXCursor_MSPropertyRefExpr;
+    break;
+
   case Stmt::ObjCIsaExprClass:
+    K = CXCursor_ObjCIsaExpr;
+    break;
+
   case Stmt::ObjCIvarRefExprClass:
+    K = CXCursor_ObjCIvarRefExpr;
+    break;
+
   case Stmt::ObjCPropertyRefExprClass:
+    K = CXCursor_ObjCPropertyRefExpr;
+    break;
+
   case Stmt::UnresolvedMemberExprClass:
-    K = CXCursor_MemberRefExpr;
+    K = CXCursor_UnresolvedMemberExpr;
     break;
 
   case Stmt::CallExprClass:
-  case Stmt::CXXOperatorCallExprClass:
-  case Stmt::CXXMemberCallExprClass:
-  case Stmt::CUDAKernelCallExprClass:
-  case Stmt::CXXConstructExprClass:
-  case Stmt::CXXInheritedCtorInitExprClass:
-  case Stmt::CXXTemporaryObjectExprClass:
-  case Stmt::CXXUnresolvedConstructExprClass:
-  case Stmt::UserDefinedLiteralClass:
     K = CXCursor_CallExpr;
+    break;
+
+  case Stmt::CXXOperatorCallExprClass:
+    K = CXCursor_CXXOperatorCallExpr;
+    break;
+
+  case Stmt::CXXMemberCallExprClass:
+    K = CXCursor_CXXMemberCallExpr;
+    break;
+
+  case Stmt::CUDAKernelCallExprClass:
+    K = CXCursor_CUDAKernelCallExpr;
+    break;
+
+  case Stmt::CXXConstructExprClass:
+    K = CXCursor_CXXConstructExpr;
+    break;
+
+  case Stmt::CXXInheritedCtorInitExprClass:
+    K = CXCursor_CXXInheritedCtorInitExpr;
+    break;
+
+  case Stmt::CXXTemporaryObjectExprClass:
+    K = CXCursor_CXXTemporaryObjectExpr;
+    break;
+
+  case Stmt::CXXUnresolvedConstructExprClass:
+    K = CXCursor_CXXUnresolvedConstructExpr;
+    break;
+
+  case Stmt::UserDefinedLiteralClass:
+    K = CXCursor_UserDefinedLiteral;
     break;
 
   case Stmt::LambdaExprClass:

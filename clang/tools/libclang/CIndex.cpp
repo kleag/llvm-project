@@ -2181,8 +2181,8 @@ public:
   void VisitOMPMaskedTaskLoopDirective(const OMPMaskedTaskLoopDirective *D);
   void
   VisitOMPMasterTaskLoopSimdDirective(const OMPMasterTaskLoopSimdDirective *D);
-  void VisitOMPMaskedTaskLoopSimdDirective(
-      const OMPMaskedTaskLoopSimdDirective *D);
+  void
+  VisitOMPMaskedTaskLoopSimdDirective(const OMPMaskedTaskLoopSimdDirective *D);
   void VisitOMPParallelMasterTaskLoopDirective(
       const OMPParallelMasterTaskLoopDirective *D);
   void VisitOMPParallelMaskedTaskLoopDirective(
@@ -5930,6 +5930,142 @@ CXString clang_getCursorKindSpelling(enum CXCursorKind Kind) {
     return cxstring::createRef("attribute(aligned)");
   case CXCursor_ConceptDecl:
     return cxstring::createRef("ConceptDecl");
+  case CXCursor_ExprWithCleanups:
+    return cxstring::createRef("ExprWithCleanups");
+  case CXCursor_MatrixSubscriptExpr:
+    return cxstring::createRef("MatrixSubscriptExpr");
+  case CXCursor_DependentScopeDeclRefExpr:
+    return cxstring::createRef("DependentScopeDeclRefExpr");
+  case CXCursor_SubstNonTypeTemplateParmExpr:
+    return cxstring::createRef("SubstNonTypeTemplateParmExpr");
+  case CXCursor_SubstNonTypeTemplateParmPackExpr:
+    return cxstring::createRef("SubstNonTypeTemplateParmPackExpr");
+  case CXCursor_FunctionParmPackExpr:
+    return cxstring::createRef("FunctionParmPackExpr");
+  case CXCursor_UnresolvedLookupExpr:
+    return cxstring::createRef("UnresolvedLookupExpr");
+  case CXCursor_CXXDependentScopeMemberExpr:
+    return cxstring::createRef("CXXDependentScopeMemberExpr");
+  case CXCursor_CXXPseudoDestructorExpr:
+    return cxstring::createRef("CXXPseudoDestructorExpr");
+  case CXCursor_MemberExpr:
+    return cxstring::createRef("MemberExpr");
+  case CXCursor_MSPropertyRefExpr:
+    return cxstring::createRef("MSPropertyRefExpr");
+  case CXCursor_ObjCIsaExpr:
+    return cxstring::createRef("ObjCIsaExpr");
+  case CXCursor_ObjCIvarRefExpr:
+    return cxstring::createRef("ObjCIvarRefExpr");
+  case CXCursor_ObjCPropertyRefExpr:
+    return cxstring::createRef("ObjCPropertyRefExpr");
+  case CXCursor_UnresolvedMemberExpr:
+    return cxstring::createRef("UnresolvedMemberExpr");
+  case CXCursor_CXXOperatorCallExpr:
+    return cxstring::createRef("CXXOperatorCallExpr");
+  case CXCursor_CXXMemberCallExpr:
+    return cxstring::createRef("CXXMemberCallExpr");
+  case CXCursor_CUDAKernelCallExpr:
+    return cxstring::createRef("CUDAKernelCallExpr");
+  case CXCursor_CXXConstructExpr:
+    return cxstring::createRef("CXXConstructExpr");
+  case CXCursor_CXXInheritedCtorInitExpr:
+    return cxstring::createRef("CXXInheritedCtorInitExpr");
+  case CXCursor_CXXTemporaryObjectExpr:
+    return cxstring::createRef("CXXTemporaryObjectExpr");
+  case CXCursor_CXXUnresolvedConstructExpr:
+    return cxstring::createRef("CXXUnresolvedConstructExpr");
+  case CXCursor_UserDefinedLiteral:
+    return cxstring::createRef("UserDefinedLiteral");
+  case CXCursor_CoroutineBodyStmt:
+    return cxstring::createRef("CoroutineBodyStmt");
+  case CXCursor_CoreturnStmt:
+    return cxstring::createRef("CoreturnStmt");
+  case CXCursor_ArrayTypeTraitExpr:
+    return cxstring::createRef("ArrayTypeTraitExpr");
+  case CXCursor_AsTypeExpr:
+    return cxstring::createRef("AsTypeExpr");
+  case CXCursor_AtomicExpr:
+    return cxstring::createRef("AtomicExpr");
+  case CXCursor_BinaryConditionalOperator:
+    return cxstring::createRef("BinaryConditionalOperator");
+  case CXCursor_TypeTraitExpr:
+    return cxstring::createRef("TypeTraitExpr");
+  case CXCursor_CoawaitExpr:
+    return cxstring::createRef("CoawaitExpr");
+  case CXCursor_DependentCoawaitExpr:
+    return cxstring::createRef("DependentCoawaitExpr");
+  case CXCursor_CoyieldExpr:
+    return cxstring::createRef("CoyieldExpr");
+  case CXCursor_CXXBindTemporaryExpr:
+    return cxstring::createRef("CXXBindTemporaryExpr");
+  case CXCursor_CXXDefaultArgExpr:
+    return cxstring::createRef("CXXDefaultArgExpr");
+  case CXCursor_CXXDefaultInitExpr:
+    return cxstring::createRef("CXXDefaultInitExpr");
+  case CXCursor_CXXFoldExpr:
+    return cxstring::createRef("CXXFoldExpr");
+  case CXCursor_CXXRewrittenBinaryOperator:
+    return cxstring::createRef("CXXRewrittenBinaryOperator");
+  case CXCursor_CXXStdInitializerListExpr:
+    return cxstring::createRef("CXXStdInitializerListExpr");
+  case CXCursor_CXXScalarValueInitExpr:
+    return cxstring::createRef("CXXScalarValueInitExpr");
+  case CXCursor_CXXUuidofExpr:
+    return cxstring::createRef("CXXUuidofExpr");
+  case CXCursor_ChooseExpr:
+    return cxstring::createRef("ChooseExpr");
+  case CXCursor_DesignatedInitExpr:
+    return cxstring::createRef("DesignatedInitExpr");
+  case CXCursor_DesignatedInitUpdateExpr:
+    return cxstring::createRef("DesignatedInitUpdateExpr");
+  case CXCursor_ArrayInitLoopExpr:
+    return cxstring::createRef("ArrayInitLoopExpr");
+  case CXCursor_ArrayInitIndexExpr:
+    return cxstring::createRef("ArrayInitIndexExpr");
+  case CXCursor_ExpressionTraitExpr:
+    return cxstring::createRef("ExpressionTraitExpr");
+  case CXCursor_ExtVectorElementExpr:
+    return cxstring::createRef("ExtVectorElementExpr");
+  case CXCursor_ImplicitCastExpr:
+    return cxstring::createRef("ImplicitCastExpr");
+  case CXCursor_ImplicitValueInitExpr:
+    return cxstring::createRef("ImplicitValueInitExpr");
+  case CXCursor_NoInitExpr:
+    return cxstring::createRef("NoInitExpr");
+  case CXCursor_MaterializeTemporaryExpr:
+    return cxstring::createRef("MaterializeTemporaryExpr");
+  case CXCursor_ObjCIndirectCopyRestoreExpr:
+    return cxstring::createRef("ObjCIndirectCopyRestoreExpr");
+  case CXCursor_OffsetOfExpr:
+    return cxstring::createRef("OffsetOfExpr");
+  case CXCursor_ParenListExpr:
+    return cxstring::createRef("ParenListExpr");
+  case CXCursor_PredefinedExpr:
+    return cxstring::createRef("PredefinedExpr");
+  case CXCursor_ShuffleVectorExpr:
+    return cxstring::createRef("ShuffleVectorExpr");
+  case CXCursor_SourceLocExpr:
+    return cxstring::createRef("SourceLocExpr");
+  case CXCursor_ConvertVectorExpr:
+    return cxstring::createRef("ConvertVectorExpr");
+  case CXCursor_VAArgExpr:
+    return cxstring::createRef("VAArgExpr");
+  case CXCursor_ObjCArrayLiteral:
+    return cxstring::createRef("ObjCArrayLiteral");
+  case CXCursor_ObjCDictionaryLiteral:
+    return cxstring::createRef("ObjCDictionaryLiteral");
+  case CXCursor_ObjCBoxedExpr:
+    return cxstring::createRef("ObjCBoxedExpr");
+  case CXCursor_ObjCSubscriptRefExpr:
+    return cxstring::createRef("ObjCSubscriptRefExpr");
+  case CXCursor_RecoveryExpr:
+    return cxstring::createRef("RecoveryExpr");
+  case CXCursor_SYCLUniqueStableNameExpr:
+    return cxstring::createRef("SYCLUniqueStableNameExpr");
+  case CXCursor_AttributedStmt:
+    return cxstring::createRef("AttributedStmt");
+  case CXCursor_CapturedStmt:
+    return cxstring::createRef("CapturedStmt");
   }
 
   llvm_unreachable("Unhandled CXCursorKind");

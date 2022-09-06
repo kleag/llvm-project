@@ -2141,7 +2141,7 @@ enum CXCursorKind {
    */
   CXCursor_SizeOfPackExpr = 143,
 
-  /* Represents a C++ lambda expression that produces a local function
+  /** Represents a C++ lambda expression that produces a local function
    * object.
    *
    * \code
@@ -2199,7 +2199,43 @@ enum CXCursorKind {
    */
   CXCursor_RequiresExpr = 154,
 
-  CXCursor_LastExpr = CXCursor_RequiresExpr,
+  /**
+   * Expression that introduces cleanups to be run at the end of the
+   * sub-expression's evaluation.
+   */
+  CXCursor_ExprWithCleanups = 155,
+
+  CXCursor_MatrixSubscriptExpr = 156,
+
+  CXCursor_DependentScopeDeclRefExpr = 157,
+
+  CXCursor_SubstNonTypeTemplateParmExpr = 158,
+
+  CXCursor_SubstNonTypeTemplateParmPackExpr = 159,
+
+  CXCursor_FunctionParmPackExpr = 160,
+
+  CXCursor_UnresolvedLookupExpr = 161,
+
+  CXCursor_CXXDependentScopeMemberExpr = 162,
+  CXCursor_CXXPseudoDestructorExpr = 163,
+  CXCursor_MemberExpr = 164,
+  CXCursor_MSPropertyRefExpr = 165,
+  CXCursor_ObjCIsaExpr = 166,
+  CXCursor_ObjCIvarRefExpr = 167,
+  CXCursor_ObjCPropertyRefExpr = 168,
+  CXCursor_UnresolvedMemberExpr = 169,
+
+  CXCursor_CXXOperatorCallExpr = 170,
+  CXCursor_CXXMemberCallExpr = 171,
+  CXCursor_CUDAKernelCallExpr = 172,
+  CXCursor_CXXConstructExpr = 173,
+  CXCursor_CXXInheritedCtorInitExpr = 174,
+  CXCursor_CXXTemporaryObjectExpr = 175,
+  CXCursor_CXXUnresolvedConstructExpr = 176,
+  CXCursor_UserDefinedLiteral = 177,
+
+  CXCursor_LastExpr = CXCursor_UserDefinedLiteral,
 
   /* Statements */
   CXCursor_FirstStmt = 200,
@@ -2646,7 +2682,56 @@ enum CXCursorKind {
    */
   CXCursor_OMPParallelMaskedTaskLoopSimdDirective = 304,
 
-  CXCursor_LastStmt = CXCursor_OMPParallelMaskedTaskLoopSimdDirective,
+  CXCursor_CoroutineBodyStmt = 305,
+
+  CXCursor_CoreturnStmt = 306,
+
+  CXCursor_ArrayTypeTraitExpr = 307,
+  CXCursor_AsTypeExpr = 308,
+  CXCursor_AtomicExpr = 309,
+  CXCursor_BinaryConditionalOperator = 310,
+  CXCursor_TypeTraitExpr = 311,
+  CXCursor_CoawaitExpr = 312,
+  CXCursor_DependentCoawaitExpr = 313,
+  CXCursor_CoyieldExpr = 314,
+  CXCursor_CXXBindTemporaryExpr = 315,
+  CXCursor_CXXDefaultArgExpr = 316,
+  CXCursor_CXXDefaultInitExpr = 317,
+  CXCursor_CXXFoldExpr = 318,
+  CXCursor_CXXRewrittenBinaryOperator = 319,
+  CXCursor_CXXStdInitializerListExpr = 320,
+  CXCursor_CXXScalarValueInitExpr = 321,
+  CXCursor_CXXUuidofExpr = 322,
+  CXCursor_ChooseExpr = 323,
+  CXCursor_DesignatedInitExpr = 324,
+  CXCursor_DesignatedInitUpdateExpr = 325,
+  CXCursor_ArrayInitLoopExpr = 326,
+  CXCursor_ArrayInitIndexExpr = 327,
+  CXCursor_ExpressionTraitExpr = 328,
+  CXCursor_ExtVectorElementExpr = 329,
+  CXCursor_ImplicitCastExpr = 330,
+  CXCursor_ImplicitValueInitExpr = 331,
+  CXCursor_NoInitExpr = 332,
+  CXCursor_MaterializeTemporaryExpr = 333,
+  CXCursor_ObjCIndirectCopyRestoreExpr = 334,
+  CXCursor_OffsetOfExpr = 335,
+  CXCursor_ParenListExpr = 336,
+  CXCursor_PredefinedExpr = 337,
+  CXCursor_ShuffleVectorExpr = 338,
+  CXCursor_SourceLocExpr = 339,
+  CXCursor_ConvertVectorExpr = 340,
+  CXCursor_VAArgExpr = 341,
+  CXCursor_ObjCArrayLiteral = 342,
+  CXCursor_ObjCDictionaryLiteral = 343,
+  CXCursor_ObjCBoxedExpr = 344,
+  CXCursor_ObjCSubscriptRefExpr = 345,
+  CXCursor_RecoveryExpr = 346,
+  CXCursor_SYCLUniqueStableNameExpr = 347,
+
+  CXCursor_AttributedStmt = 348,
+  CXCursor_CapturedStmt = 349,
+
+  CXCursor_LastStmt = CXCursor_CapturedStmt,
 
   /**
    * Cursor that represents the translation unit itself.
